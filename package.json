@@ -1,0 +1,23 @@
+{
+  "name": "threejs-claude-starter",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Zero-build three.js + anime.js 3D game starter, designed to be extended with Claude Code.",
+  "license": "MIT",
+  "scripts": {
+    "start": "python3 -m http.server 8765",
+    "serve": "python3 -m http.server 8765"
+  },
+  "keywords": [
+    "threejs",
+    "anime.js",
+    "3d",
+    "game",
+    "starter",
+    "template",
+    "claude",
+    "claude-code",
+    "no-build"
+  ]
+}

@@ -1,0 +1,13 @@
+# This starter has no build step — vendor/ is committed on purpose.
+# Only ignore local cruft.
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Node (only if you add optional tooling later — not required to run)
+node_modules/
+npm-debug.log*
