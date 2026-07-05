@@ -36,17 +36,40 @@ gh repo create my-3d-game --template markjeromecruz/threejs-claude-starter --pub
 cd my-3d-game
 ```
 
-### 2. Run it locally
-Module scripts + importmaps need a real `http://` origin (not `file://`), so
-serve the folder with any static server:
+### 2. See it running
+
+The simplest preview needs **no local setup at all**: deploy straight to
+**GitHub Pages** and open the live link
+([START-HERE → Part 3](START-HERE.md#part-3--publish-your-game-to-the-internet-3-minutes)).
+That's the entire preview for the copy-paste (claude.ai) workflow.
+
+Want an **instant** local preview instead? Two ways:
+
+**Easiest — let Claude Code do it for you** (needs
+[Claude Code](https://claude.com/claude-code) installed on your computer — a
+Claude Pro/Max feature; on the free plan, just use the Pages link above). Tell
+it:
+
+> *clone https://github.com/YOUR-USERNAME/YOUR-GAME-NAME if it isn't already here, then start a local server so I can preview the game*
+
+It grabs the code, checks what's already on your machine, starts the right
+static server (installing one only if needed), and hands you the link — you
+never have to know what Python or Node is. On a **brand-new** Mac or PC the first
+setup can pop up a system dialog to approve an install and ask for your computer
+password (macOS no longer ships Python; Windows ships neither Python nor Node) —
+Claude tells you exactly what to click, and after that it's automatic.
+
+**Or do it yourself**, if you already have one of these:
 
 ```bash
-python3 -m http.server 8765
-# then open http://127.0.0.1:8765/
+python3 -m http.server 8765     # Python 3
+npx serve                       # Node.js (installs 'serve' on first run)
 ```
 
-You should see the loading screen fade into a sunny courtyard. Drag to look,
-scroll to zoom, WASD/arrow keys to move.
+Module scripts + importmaps need a real `http://` origin — double-clicking
+`index.html` (a `file://` URL) won't work, so use a server or Pages. Open the
+link and the loading screen fades into a sunny courtyard. Drag to look, scroll
+to zoom, WASD/arrow keys to move.
 
 ### 3. Build with Claude Code
 This is the fun part. Open the folder in [Claude Code](https://claude.com/claude-code)

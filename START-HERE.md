@@ -277,8 +277,15 @@ time, kid-friendly explanations).
 2. Ask Claude Code itself to set you up — it's good at this:
    *"Clone https://github.com/YOUR-USERNAME/YOUR-GAME-NAME and open it."*
 3. Describe ideas. Claude edits, commits, and pushes; your live game updates
-   ~1 minute after each push. Bonus: ask it to *"run a local server so we can
-   preview instantly"* and you'll see changes without waiting for publishing.
+   ~1 minute after each push. Bonus: ask it to *"start a local server so we can
+   preview instantly"* and you'll see changes right away without waiting for
+   publishing. Don't have Python or any dev tools? You don't need to set them up
+   yourself — Claude Code figures out what's needed and walks you through it. The
+   very first time it installs something on a brand-new Mac or PC, you may see
+   one system dialog to approve and be asked for your computer password; Claude
+   tells you exactly what to click, and after that it's automatic. (This only
+   affects the optional instant preview — editing, saving, and publishing your
+   game always work.)
 
 > 🔐 **One privacy note for local Path B:** commits you make from your own
 > computer can attach your real name and email to the public repo. Before your
