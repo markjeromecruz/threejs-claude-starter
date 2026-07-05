@@ -15,6 +15,14 @@ idea at a time.
 > vendored into `vendor/` and loaded through an importmap, so the code reads
 > exactly like the official docs and runs from any static file server.
 
+**[▶️ Try the live demo](https://markjeromecruz.github.io/threejs-claude-starter/)** — this exact repo, published free with GitHub Pages.
+
+> 🧒👪 **Never coded before? Building this with your kid?**
+> Follow **[START-HERE.md](START-HERE.md)** — a step-by-step guide for complete
+> beginners: free GitHub account → your own copy → live on the internet →
+> building with Claude (even with just claude.ai in a browser tab, nothing to
+> install). Then raid the **[Prompt Idea Book](PROMPT-IDEAS.md)** for ideas.
+
 ---
 
 ## Get started in 60 seconds
@@ -55,6 +63,11 @@ Claude reads [`CLAUDE.md`](CLAUDE.md) (the house rules for this repo), edits
 `src/main.js`, and can even pull **free CC0 assets** from the web when you
 describe a theme. Refresh the browser to see each change.
 
+**No Claude Code?** You can build entirely from a browser with **claude.ai**
+(free plan) plus GitHub's web editor — the full copy-paste workflow, including
+a ready-made kickoff message for Claude, is in
+[START-HERE.md → Path A](START-HERE.md#path-a--claudeai--copy-paste-free-nothing-to-install).
+
 ---
 
 ## Project layout
@@ -63,6 +76,8 @@ describe a theme. Refresh the browser to see each change.
 .
 ├── index.html          # importmap + loading screen + HUD (start here)
 ├── CLAUDE.md           # how Claude Code should build on this starter
+├── START-HERE.md       # zero-experience guide for parents & kids
+├── PROMPT-IDEAS.md     # copy-paste idea book for your Game Designer
 ├── src/
 │   └── main.js         # the whole scene: renderer, sky, lights, post-fx, controls, loop
 ├── assets/
@@ -118,8 +133,15 @@ See [`assets/CREDITS.md`](assets/CREDITS.md).
 ## Deploy it
 
 It's a static site — host it anywhere. The simplest is **GitHub Pages**:
-push to `main`, then in **Settings → Pages** set the source to the `main` branch
-root. Your world goes live at `https://<you>.github.io/<repo>/`.
+push to `main`, then in **Settings → Pages** set the source to **Deploy from a
+branch** → `main` → `/ (root)`. Your world goes live at
+`https://<you>.github.io/<repo>/` — usually within a minute (the first publish
+can take several), and republishes automatically on every push. (Click-by-click
+instructions for first-timers:
+[START-HERE.md → Part 3](START-HERE.md#part-3--publish-your-game-to-the-internet-3-minutes).)
+
+All paths in the template are relative (`./src/…`, `./vendor/…`), so it works
+from a Pages subpath out of the box.
 
 ## Origin
 

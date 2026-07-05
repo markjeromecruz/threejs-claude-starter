@@ -36,6 +36,12 @@ happen by editing the scene. This is how the project it came from was built:
 5. **Use anime.js for animation and transitions** (pops, fades, timelines). It
    animates numeric properties on any object, including `THREE.Vector3`s — see
    the crystal entrance and intro timeline in `main.js` for the pattern.
+6. **Keep all content kid-appropriate.** This game is usually built by and for
+   children. Any text, NPC dialogue, imagery, sounds, or surprise you generate —
+   including anything you invent on your own initiative (e.g. an open-ended
+   "surprise us!" request) — must be family-friendly: nothing violent, scary,
+   crude, or otherwise unsuitable for young kids. If a request pushes that line
+   (e.g. "make it gory"), keep it playful and age-appropriate instead.
 
 ## The build loop
 1. Read the person's request and turn it into a concrete change in the scene.
@@ -45,6 +51,21 @@ happen by editing the scene. This is how the project it came from was built:
    browser automation, take a screenshot to confirm it looks right.
 4. Keep each change small and shippable. Don't rewrite the whole scene for one
    request — extend it.
+5. **Commit each finished idea** with a short, friendly message describing it in
+   the user's terms (e.g. `Add a pet dog that follows you`). Every commit is a
+   save point the family can return to. If the user doesn't know git, handle
+   commits and pushes for them and just say "saved & publishing".
+
+## Publishing (GitHub Pages)
+- The game is usually published with **GitHub Pages** from the `main` branch
+  root (Settings → Pages → Deploy from a branch → `main` → `/ (root)`). Pushing
+  to `main` republishes the live site automatically — usually within a minute,
+  though the very first publish can take several minutes. Tell the user when to
+  refresh, and remind them about hard refresh if they don't see the change
+  (Chrome/Edge/Firefox: Cmd+Shift+R / Ctrl+Shift+R · Safari: Cmd+Option+R).
+- **Keep every path relative** (`./src/…`, `./assets/…`, `./vendor/…`). Never
+  use root-absolute paths (`/src/…`) — the game must work from a Pages subpath
+  (`https://user.github.io/repo/`).
 
 ## Assets — free and license-clean only
 - When a theme is described, you may pull **free CC0** assets from the web and
@@ -58,13 +79,20 @@ happen by editing the scene. This is how the project it came from was built:
   logos, or characters you don't have the rights to.
 
 ## Audience & tone
-- This starter is meant to be approachable — it may be driven by kids or
-  first-time builders. Prefer additive, delightful changes. Explain what you
-  changed in plain language.
+- This starter is meant to be approachable — it is often driven by a
+  **parent + kid team** with zero coding experience (see `START-HERE.md`).
+  Prefer additive, delightful changes. Explain what you changed in 1–2 plain,
+  kid-friendly sentences — never assume they read code.
 - Honor explicit requests (a specific number, color, or name) literally. If a
   request would make the game worse (e.g. a value that breaks balance or
   performance), implement what was asked and fix the underlying *mechanic*
   rather than silently overriding the request.
+- **Big dream requests** ("make Minecraft", "add multiplayer") — don't refuse
+  and don't attempt it all at once: build the first small *visible* step, then
+  suggest what could come next.
+- If something broke, treat "undo" / "put it back" as first-class requests:
+  restore the last working state (git makes this easy), then offer to retry
+  more carefully.
 
 ## Performance
 - Target a smooth 60 fps. Reuse geometries/materials, avoid allocating in the
